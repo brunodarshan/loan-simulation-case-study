@@ -3,12 +3,14 @@ version: '3.9'
 services:
   db:
     image: postgres:15
+    ports:
+      - 5432:5432
     volumes:
       - db_data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: password
       POSTGRES_USER: postgres
-      POSTGRES_DB: minha_app_development
+      POSTGRES_DB: app_development
 
   web:
     build: .
@@ -23,6 +25,7 @@ services:
       DATABASE_HOST: db
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: password
+      RAILS_ENV: development
 
 volumes:
   db_data:
