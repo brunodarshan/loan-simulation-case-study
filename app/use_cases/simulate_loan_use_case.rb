@@ -3,9 +3,9 @@ class SimulateLoanUseCase
   PRECISION = 4
   def initialize(value:, birthday:, months:)
     @value = value.to_f
-    @birthday = birthday
+    @birthday = Date.parse(birthday)
     @months = months.to_i
-    @age = calculate_age(birthday)
+    @age = calculate_age(Date.parse(birthday))
   end
 
   def call
