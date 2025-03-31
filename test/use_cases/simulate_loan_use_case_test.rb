@@ -25,7 +25,7 @@ class SimulateLoanUseCaseTest < ActiveSupport::TestCase
   private
 
   def simulate_and_assert(years_ago:, expected_rate:)
-    birthday = years_ago.years.ago.to_date
+    birthday = years_ago.years.ago.to_date.to_s
     result = SimulateLoanUseCase.new(value: @value, birthday: birthday, months: @months).call
 
     total_expected = (@value * (1.0 + expected_rate)).round(4)

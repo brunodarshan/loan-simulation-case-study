@@ -14,4 +14,5 @@ Rails.application.routes.draw do
 
   # config/routes.rb
   post "/simulate", to: "loans#simulate"
+  post "/simulate_on_queue", to: "loans#simulate_on_queue"
 end
