@@ -1,3 +1,5 @@
+"A palavra realizar pra mim é mágica, ela carrega algo que se eleva além do fazer: O criar. Trazer algo à existência a partir da entropia.", Bruno Darshan
+
 # ✨ Desafio Técnico – Simulação de Empréstimo
 
 Esta aplicação em Ruby on Rails realiza simulações de empréstimo com base em dados fornecidos via CSV, processando cada linha de forma assíncrona e utilizando serviços simulados da AWS (S3 + SQS via LocalStack).
@@ -105,20 +107,9 @@ QueuedProcess.find_by(process_id: "<process_id>")
 
 ---
 
-## 📦 Extras
-
-- S3 e SQS simulados via LocalStack
-- Integração com `aws-sdk-s3`
-- Upload controlado por `S3Uploader`
-- Job assíncrono pronto para implementação (`ProcessCsvJob`)
-
----
-
 ## 📊 Arquitetura da Solução
 
-A estrutura da aplicação foi desenhada pensando em escalabilidade e separação de responsabilidades, conforme ilustrado abaixo:
-
-![Arquitetura da aplicação](./docs/arquitetura.png)
+![Arquitetura da aplicação](./docs/arquitetura.JPG)
 
 **Camadas:**
 
@@ -129,8 +120,8 @@ A estrutura da aplicação foi desenhada pensando em escalabilidade e separaçã
   - `simulate_loan`: encapsula a lógica de simulação
   - `upload_csv`: lida com o recebimento do arquivo, upload no bucket e criação do processo
 
-- **Jobs: PARCIALMENTE IMPLEMENTADA** 
-  - `load_simulation_consumer`: responsável por ler o CSV do bucket, processar as simulações e enviar para a fila (SQS)
+- **Jobs: NÃO IMPLEMENTADA** 
+
 
 - **Infraestrutura:**
   - Banco de dados PostgreSQL
@@ -140,12 +131,7 @@ A estrutura da aplicação foi desenhada pensando em escalabilidade e separaçã
 
 ## ✅ Considerações finais
 
-O projeto foi desenvolvido com foco em:
-- Clareza e separação de responsabilidades
-- Facilidade de testes e extensão
-- Estrutura de código realista para produção
-
----
+ - Incluiria validações de parametros mais robustas.
 
 ## 📝 Licença
 
