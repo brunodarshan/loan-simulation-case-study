@@ -108,7 +108,7 @@ QueuedProcess.find_by(process_id: "<process_id>")
 ## 📦 Extras
 
 - S3 e SQS simulados via LocalStack
-- Integração com `aws-sdk-s3` e `aws-sdk-sqs`
+- Integração com `aws-sdk-s3`
 - Upload controlado por `S3Uploader`
 - Job assíncrono pronto para implementação (`ProcessCsvJob`)
 
