@@ -18,13 +18,6 @@ Esta aplicação em Ruby on Rails realiza simulações de empréstimo com base e
 
 ## 🚀 Como rodar o projeto
 
-### 1. Clone o repositório
-
-```bash
-git clone <repo>
-cd <repo>
-```
-
 ### 2. Suba o ambiente com Docker
 
 ```bash
